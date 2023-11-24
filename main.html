@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li {
+            margin: 25px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        li:hover {
+            transform: translateY(-5px);
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .description {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    
+    <h2>Salmon Restaurant</h2>
+    <ul>
+        <li><img src="images/salmon2.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon3.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon4.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon1.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon5.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon6.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon7.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon8.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon9.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon10.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon11.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+        <li><img src="images/salmon12.jpg"><div class="description">연어 초밥 - 신선한 연어로 만든 초밥입니다.</div></li>
+    </ul>
+    <script>
+        const images = document.querySelectorAll('img');
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const description = this.nextElementSibling;
+                description.style.display = (description.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
